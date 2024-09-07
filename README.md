@@ -1,4 +1,5 @@
-# HikmatApp
+
+![HikmatApp 1 2](https://github.com/user-attachments/assets/6e444bdc-ab90-4ce9-bdfb-917185e0dd53)
 
 ### Empowering Education Through Offline Access
 
