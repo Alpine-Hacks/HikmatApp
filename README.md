@@ -5,8 +5,8 @@
 
 **HikmatApp** is an open-source platform dedicated to providing free, high-quality educational resources to students worldwide, even without an internet connection. Our mission is to bridge the educational gap in underserved communities by offering a user-friendly application that supports multiple users, tracks learning progress, and offers customizable experiences.
 
-
-
+| PLEASE NOTE: This project is still in development, and has only just started! So none of the key features or descriptions have been fully implemented. We are beginner friendly and looking for contributors! |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 ## Getting Started
 
 ### Key Features
