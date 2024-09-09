@@ -35,6 +35,7 @@
 We warmly welcome and appreciate contributions to **HikmatApp**! Whether you're fixing bugs, suggesting new features, enhancing the documentation, or providing feedback, your input is valuable in helping us achieve our mission of providing free, offline education to students worldwide.
 
 Please refer to [CONTRIBUTING.md](https://github.com/Alpine_Hacks/HikmatApp/CONTRIBUTING.md) for further details . Thanks in advance ❤
+
 ---
 
 ## License
