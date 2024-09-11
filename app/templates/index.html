@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - HikmatApp{% endblock %}
+
+{% block content %}
+    <h1>Welcome to HikmatApp</h1>
+    <p>Your gateway to offline learning.</p>
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="HikmatApp Logo">
+{% endblock %}
