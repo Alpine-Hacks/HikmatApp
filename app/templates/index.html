@@ -3,7 +3,11 @@
 {% block title %}Home - HikmatApp{% endblock %}
 
 {% block content %}
-    <h1>Welcome to HikmatApp</h1>
-    <p>Your gateway to offline learning.</p>
-    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="HikmatApp Logo">
+    <!-- <h1>Welcome to HikmatApp</h1>
+    <p>Your gateway to offline learning.</p> -->
+    
+    <!-- Use a wrapper div to center the image -->
+    <div style="text-align: center;">
+        <img src="{{ url_for('static', filename='img/hikmatapp_banner.png') }}" alt="HikmatApp Banner" style="display: block; margin: auto;">
+    </div>
 {% endblock %}

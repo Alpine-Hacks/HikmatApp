@@ -1,7 +1,14 @@
 import os
 
-basedir = os.path.abspath(os.path.dirname(__file__))
+# Go one level up from the 'app' directory to get the project root
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
-SECRET_KEY = 'your_secret_key'
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'database/hikmat.db')
-SQLALCHEMY_TRACK_MODIFICATIONS = False
+# Construct the path to the database file
+db_path = os.path.join(BASE_DIR, 'database', 'hikmat.db')
+
+# Ensure the path uses forward slashes for the SQLite URI
+SQLALCHEMY_DATABASE_URI = f"sqlite:///{db_path.replace(os.sep, '/')}"
+
+SQLALCHEMY_TRACK_MODIFICATIONS = False  # Optional, disables modification tracking
+
+print(SQLALCHEMY_DATABASE_URI)
