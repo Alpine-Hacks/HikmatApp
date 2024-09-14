@@ -1,41 +1,114 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Styles */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
-    background-color: #004080;
-    padding: 10px 20px;
-    color: #ffffff;
+    background-color: #0044cc;
+    padding: 1rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
+    color: white;
+    margin-left: 1rem;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.auth-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
-main {
-    padding: 20px;
-}
-
-h1 {
-    color: #333333;
+.auth-links a {
+    color: white;
+    font-weight: bold;
 }
 
 footer {
-    background-color: #004080;
-    color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: 1rem;
+    background-color: #0044cc;
+    color: white;
     position: fixed;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+}
+
+/* Auth Forms (Login & Signup) */
+.auth-container {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(30%);
+}
+
+.auth-container h2 {
+    color: #0044cc;
+    margin-bottom: 1.5rem;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-container input:focus {
+    border-color: #0044cc;
+    outline: none;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #003399;
+}
+
+.auth-container a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
 }

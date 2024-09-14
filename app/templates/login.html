@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - HikmatApp{% endblock %}
+
+{% block content %}
+    <div class="auth-container">
+        <h2>Login to Your Account</h2>
+        <form method="POST" action="{{ url_for('main.login') }}">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{{ url_for('main.signup') }}">Sign up here</a></p>
+    </div>
+{% endblock %}

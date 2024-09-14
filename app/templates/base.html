@@ -10,14 +10,19 @@
     <header>
         <nav>
             <a href="{{ url_for('main.index') }}">Home</a>
-
+            <div class="auth-links">
+                <a href="{{ url_for('main.login') }}">Login</a>
+                <a href="{{ url_for('main.signup') }}">Signup</a>
+            </div>
         </nav>
     </header>
+
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer>
+
+    <!-- <footer>
         <p>&copy; 2024 HikmatApp. All rights reserved.</p>
-    </footer>
+    </footer> -->
 </body>
 </html>
