@@ -13,3 +13,5 @@ def login():
 @bp.route('/signup')
 def signup():
     return render_template('signup.html')  # Renders the signup page
+
+
