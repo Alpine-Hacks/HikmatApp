@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HikmatApp</title>
+    <script src="./react/react.development.js"></script>
+    <script src="./react/react-dom.development.js"></script>
+    <script src="./babel/babel.js"></script>
+    <script src="./tailwind/3.4.5"></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link href="./fontawesome/css/css2.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<!-- <body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        // Sidebar component with active item highlighting
+        const Sidebar = ({ currentPage, setPage }) => {
+            const sidebarItems = [
+                { name: 'Dashboard', icon: 'fa-home', page: 'dashboard' },
+                { name: 'Courses', icon: 'fa-book', page: 'courses' },
+                { name: 'Enrolled', icon: 'fa-graduation-cap', page: 'enrolled' },
+                { name: 'Progress', icon: 'fa-chart-line', page: 'progress' },
+                { name: 'Notes', icon: 'fa-sticky-note', page: 'notes' },
+                { name: 'Settings', icon: 'fa-cog', page: 'settings' }
+            ];
+
+            return (
+                <aside class="w-64 bg-white h-screen shadow-md fixed">
+                    <div class="p-4">
+                        <img src="./img/logo.png" alt="HikmatApp Logo" class="mb-4"/>
+                        <nav>
+                            <ul>
+                                {sidebarItems.map(item => (
+                                    <li
+                                        key={item.page}
+                                        class={`flex items-center p-2 mb-2 rounded-md cursor-pointer ${
+                                            currentPage === item.page
+                                                ? 'bg-blue-100 text-blue-600'
+                                                : 'text-gray-700 hover:bg-gray-200'
+                                        }`}
+                                        onClick={() => setPage(item.page)}
+                                    >
+                                        <i class={`fas ${item.icon} mr-3`}></i> {item.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+            );
+        };
+
+        // Example pages for each section
+        const DashboardPage = () => {
+            return <h1 class="text-2xl font-semibold">Dashboard</h1>;
+        };
+
+        const CoursesPage = () => {
+            return <h1 class="text-2xl font-semibold">Courses</h1>;
+        };
+
+        const EnrolledPage = () => {
+            return <h1 class="text-2xl font-semibold">Enrolled</h1>;
+        };
+
+        const ProgressPage = () => {
+            return <h1 class="text-2xl font-semibold">Progress</h1>;
+        };
+
+        const NotesPage = () => {
+            return <h1 class="text-2xl font-semibold">Notes</h1>;
+        };
+
+        const SettingsPage = () => {
+            return <h1 class="text-2xl font-semibold">Settings</h1>;
+        };
+
+        // Main App component
+        const App = () => {
+            const [page, setPage] = useState('dashboard');
+
+            const renderPage = () => {
+                switch (page) {
+                    case 'courses':
+                        return <CoursesPage />;
+                    case 'enrolled':
+                        return <EnrolledPage />;
+                    case 'progress':
+                        return <ProgressPage />;
+                    case 'notes':
+                        return <NotesPage />;
+                    case 'settings':
+                        return <SettingsPage />;
+                    default:
+                        return <DashboardPage />;
+                }
+            };
+
+            return (
+                <div class="flex">
+                    <Sidebar currentPage={page} setPage={setPage} />
+                    <main class="flex-1 p-8 ml-64 overflow-y-auto">
+                        {renderPage()}
+                    </main>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
+ -->
+
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        // Sidebar component with active item highlighting and Settings at the bottom
+        const Sidebar = ({ currentPage, setPage }) => {
+            const sidebarItems = [
+                { name: 'Dashboard', icon: 'fa-home', page: 'dashboard' },
+                { name: 'Courses', icon: 'fa-book', page: 'courses' },
+                { name: 'Enrolled', icon: 'fa-graduation-cap', page: 'enrolled' },
+                { name: 'Progress', icon: 'fa-chart-line', page: 'progress' },
+                { name: 'Notes', icon: 'fa-sticky-note', page: 'notes' },
+            ];
+
+            return (
+                <aside class="w-64 bg-white h-screen shadow-md fixed flex flex-col justify-between">
+                    <div class="p-4">
+                        <img src="./img/logo.png" alt="HikmatApp Logo" class="mb-4"/>
+                        <nav>
+                            <ul>
+                                {sidebarItems.map(item => (
+                                    <li
+                                        key={item.page}
+                                        class={`flex items-center p-2 mb-2 rounded-md cursor-pointer ${
+                                            currentPage === item.page
+                                                ? 'bg-blue-100 text-blue-600'
+                                                : 'text-gray-700 hover:bg-gray-200'
+                                        }`}
+                                        onClick={() => setPage(item.page)}
+                                    >
+                                        <i class={`fas ${item.icon} mr-3`}></i> {item.name}
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="p-4">
+                        <li
+                            class={`flex items-center p-2 mb-2 rounded-md cursor-pointer ${
+                                currentPage === 'settings'
+                                    ? 'bg-blue-100 text-blue-600'
+                                    : 'text-gray-700 hover:bg-gray-200'
+                            }`}
+                            onClick={() => setPage('settings')}
+                        >
+                            <i class="fas fa-cog mr-3"></i> Settings
+                        </li>
+                    </div>
+                </aside>
+            );
+        };
+
+        // Dashboard component with sample sections
+        const DashboardPage = () => {
+            return (
+                <div class="space-y-8">
+                    <h1 class="text-3xl font-semibold mb-6">Welcome to HikmatApp, Arjamand !</h1>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold mb-4">New Courses</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Python for Beginners</h3>
+                                <p class="text-gray-600">An introductory course to Python programming.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Data Science Fundamentals</h3>
+                                <p class="text-gray-600">Learn the basics of Data Science and its applications.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Web Development Bootcamp</h3>
+                                <p class="text-gray-600">Master web development with HTML, CSS, and JavaScript.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold mb-4">Enrolled Courses</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Digital SAT Prep</h3>
+                                <p class="text-gray-600">A comprehensive guide to the new digital SAT.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">12th Math</h3>
+                                <p class="text-gray-600">A deep dive into the course material of Grade 12.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-semibold mb-4">Notes</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Digital SAT Prep</h3>
+                                <p class="text-gray-600">Notes on textual evidence questions.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Data Visualization</h3>
+                                <p class="text-gray-600">Charts, graphs, and techniques for data visualization.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+        };
+
+        const CoursesPage = () => <h1 class="text-2xl font-semibold">Courses</h1>;
+        const EnrolledPage = () => <h1 class="text-2xl font-semibold">Enrolled</h1>;
+        const ProgressPage = () => <h1 class="text-2xl font-semibold">Progress</h1>;
+        const NotesPage = () => <h1 class="text-2xl font-semibold">Notes</h1>;
+        const SettingsPage = () => <h1 class="text-2xl font-semibold">Settings</h1>;
+
+        // Main App component
+        const App = () => {
+            const [page, setPage] = useState('dashboard');
+
+            const renderPage = () => {
+                switch (page) {
+                    case 'courses':
+                        return <CoursesPage />;
+                    case 'enrolled':
+                        return <EnrolledPage />;
+                    case 'progress':
+                        return <ProgressPage />;
+                    case 'notes':
+                        return <NotesPage />;
+                    case 'settings':
+                        return <SettingsPage />;
+                    default:
+                        return <DashboardPage />;
+                }
+            };
+
+            return (
+                <div class="flex">
+                    <Sidebar currentPage={page} setPage={setPage} />
+                    <main class="flex-1 p-8 ml-64 overflow-y-auto">
+                        {renderPage()}
+                    </main>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
