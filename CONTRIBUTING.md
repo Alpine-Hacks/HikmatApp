@@ -2,6 +2,83 @@
 
 We warmly welcome and appreciate contributions to HikmatApp! Whether you're fixing bugs, suggesting new features, enhancing the documentation, or providing feedback, your input is valuable in helping us achieve our mission of providing free, offline education to students worldwide.
 
+## Setting Up the Environment
+
+### Windows
+
+1. **Install Python:**
+   - Download from [python.org](https://www.python.org/downloads/).
+   - Ensure Python is added to PATH during installation.
+
+2. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Alpine-Hacks/HikmatApp.git
+   cd HikmatApp
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   python -m venv myenv
+   myenv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application:**
+   ```bash
+   python init_db.py
+   python run.py
+   ```
+
+### macOS
+
+1. **Install Python** (via Homebrew):
+   ```bash
+   brew install python
+   ```
+
+2. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Alpine-Hacks/HikmatApp.git
+   cd HikmatApp
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   python3 -m venv myenv
+   source myenv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application:**
+   ```bash
+   python init_db.py
+   python run.py
+   ```
+
+### Linux
+
+1. **Install Python:**
+   - Use your package manager, e.g., `sudo apt-get install python3`
+
+2. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Alpine-Hacks/HikmatApp.git
+   cd HikmatApp
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   python3 -m venv myenv
+   source myenv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application:**
+   ```bash
+   python init_db.py
+   python run.py
+   ```
+
 ## How to Contribute
 
 ### Explore the Project:
@@ -64,81 +141,8 @@ If you’re new to open-source contribution or unsure about something, don’t h
 
 - Open an issue with the "Help Wanted" label.
 - Join our community discussions (if available) to ask questions and get advice from experienced contributors.
-- Reach out directly via email at support@hikmat.org.
+- Reach out directly via email at info.hikmatapp@gmail.com.
 
 
-## Setting Up the Environment
-
-### Windows
-
-1. **Install Python:**
-   - Download from [python.org](https://www.python.org/downloads/).
-   - Ensure Python is added to PATH during installation.
-
-2. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/Alpine-Hacks/HikmatApp.git
-   cd hikmatapp
-   ```
-
-3. **Install Dependencies:**
-   ```bash
-   python -m venv myenv
-   myenv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-4. **Run the Application:**
-   ```bash
-   python app/app.py
-   ```
-
-### macOS
-
-1. **Install Python** (via Homebrew):
-   ```bash
-   brew install python
-   ```
-
-2. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/Alpine-Hacks/HikmatApp.git
-   cd hikmatapp
-   ```
-
-3. **Install Dependencies:**
-   ```bash
-   python3 -m venv myenv
-   source myenv/bin/activate
-   pip install -r requirements.txt
-   ```
-
-4. **Run the Application:**
-   ```bash
-   python app/app.py
-   ```
-
-### Linux
-
-1. **Install Python:**
-   - Use your package manager, e.g., `sudo apt-get install python3`
-
-2. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/Alpine-Hacks/HikmatApp.git
-   cd hikmatapp
-   ```
-
-3. **Install Dependencies:**
-   ```bash
-   python3 -m venv myenv
-   source myenv/bin/activate
-   pip install -r requirements.txt
-   ```
-
-4. **Run the Application:**
-   ```bash
-   python app/app.py
-   ```
 
 Thank you for contributing to HikmatApp and helping us provide educational opportunities to students worldwide!
