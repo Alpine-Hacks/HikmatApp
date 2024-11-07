@@ -141,7 +141,7 @@ If you’re new to open-source contribution or unsure about something, don’t h
 
 - Open an issue with the "Help Wanted" label.
 - Join our community discussions (if available) to ask questions and get advice from experienced contributors.
-- Reach out directly via email at info.hikmatapp@gmail.com.
+- Reach out directly via email at info.alpinehacks@gmail.com.
 
 
 
